@@ -75,5 +75,23 @@
       <p>Reach out to us for bookings and questions.</p>
     </section>
   </main>
+  <script>
+    const navLinks = document.querySelectorAll('.menu-bar a');
+
+    function updateCurrentLocation() {
+      const currentHash = window.location.hash || '#home';
+
+      navLinks.forEach((link) => {
+        if (link.getAttribute('href') === currentHash) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    updateCurrentLocation();
+    window.addEventListener('hashchange', updateCurrentLocation);
+  </script>
 </body>
 </html>
