@@ -34,8 +34,12 @@
     }
 
     .menu-bar a:focus {
-      outline: 2px solid #ffffff;
+      outline: 3px solid #fbbf24;
       outline-offset: 2px;
+    }
+
+    .menu-bar a[aria-current="page"] {
+      text-decoration: underline;
     }
 
     main {
@@ -47,7 +51,7 @@
 <body>
   <nav aria-label="Main navigation">
     <ul class="menu-bar">
-      <li><a href="#home">Home</a></li>
+      <li><a href="#home" aria-current="page">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
